@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Portfolio</title>
+
+
+<style>
+body{
+
+	background-color: black;
+	margin: 0;
+	font-family: Times New Roman, serif;
+	color:white;
+} 
+.topbar{
+	overflow: hidden;
+	margin: 0;
+	position: fixed;
+    top: 0;
+    width: 100%;
+	background-color:black;
+}
+
+.topbar a{
+	float:left;
+	color:white;
+	text-align:center;
+	text-decoration:none;  
+	padding: 14px 16px;  
+	font-size: 20px;
+
+}
+
+.topbar a:hover{
+	background-color: #F3F1F5;
+	color: black;
+}
+
+.topbar a.active{
+	background-color: #F3F1F5;
+	color: black;
+}
+
+.container{
+	display:inline;
+	border: 2px solid;
+	border-color: #9D9D9D;
+	padding:10px;
+}
+
+.textcentru{
+	position:absolute;
+	top:70%;
+	left:50%;
+	margin:0;
+	transform: translate(-50%, -50%);
+}
+</style>
+<script>
+
+var x = 1
+
+function schimbaurm(){
+	var poza = document.getElementById("poza")
+	var text = document.getElementById("text")
+	var titlu = document.getElementById("titlu")
+	
+	
+	if(x == 1)
+		{
+		poza.src = "so.jpg"
+		titlu.innerHTML = "Operating Systems"
+		text.innerHTML = "During my second semester of my second year of collage I had another project regarding Operating Systems. I had to work by myself and I had to build a Windows 10 virtual machine, a Windows Server vistual machine and a Ubuntu by Linux virtual machine using VMware. The second task was to connect all the operating systems together and work with some of the functionalities of all three."
+		x = 2
+		}
+		
+	else if (x == 2)
+		{
+		poza.src = "html css js.jpeg"
+		titlu.innerHTML = "Personal Portfolio with HTML, CSS and JavaScript"
+		text.innerHTML = "Now I am in my final year and during the first semester I had a project using HTML, CSS and Java Script. The task was to buil an online personal portofolio with HTML, style it with CSS and add Java Script functionalities. I had to implement an About page where I was talking about my passions and personality, a Contact page to let people know how they can get in touch with me and a Portfolio page to write some of my projects in. You guessed it! This is the way the page you're on was born."
+		x = 3
+		}
+		
+	else if (x == 3)
+		{
+		poza.src = "oracle.jpg"
+		titlu.innerHTML = "Oracle Database with SQL"
+		text.innerHTML = "During the second semester of my second year of collage I did a project using Oracle Application and SQL language. The task was to build the database of an online auction company. During the development of the projectI have used 10 tables between which I have established connections based on primary and foreign keys and in wchich I have inserted elements. I have also set some constraints regarding the null values, the uniqueness of some elements and the range in which some recordings must fit."
+		x = 1
+		}
+		
+}
+
+function schimbapre()
+{
+	var poza = document.getElementById("poza")
+	var text = document.getElementById("text")
+	var titlu = document.getElementById("titlu")
+	
+	
+	if(x == 1)
+		{
+		poza.src = "html css js.jpeg"
+		titlu.innerHTML = "Personal Portfolio with HTML, CSS and JavaScript"
+		text.innerHTML = "Now I am in my final year and during the first semester I had a project using HTML, CSS and Java Script. The task was to buil an online personal portofolio with HTML, style it with CSS and add Java Script functionalities. I had to implement an About page where I was talking about my passions and personality, a Contact page to let people know how they can get in touch with me and a Portfolio page to write some of my projects in. You guessed it! This is the way the page you're on was born."
+		x = 3
+		}
+		
+	else if (x == 2)
+		{
+		poza.src = "oracle.jpg"
+		titlu.innerHTML = "Oracle Database with SQL"
+		text.innerHTML = "During the second semester of my second year of collage I did a project using Oracle Application and SQL language. The task was to build the database of an online auction company. During the development of the projectI have used 10 tables between which I have established connections based on primary and foreign keys and in wchich I have inserted elements. I have also set some constraints regarding the null values, the uniqueness of some elements and the range in which some recordings must fit."
+		x = 1
+		}
+		
+	else if (x == 3)
+		{
+		poza.src = "so.jpg"
+		titlu.innerHTML = "Operating Systems"
+		text.innerHTML = "During my second semester of my second year of collage I had another project regarding Operating Systems. I had to work by myself and I had to build a Windows 10 virtual machine, a Windows Server vistual machine and a Ubuntu by Linux virtual machine using VMware. The second task was to connect all the operating systems together and work with some of the functionalities of all three."
+		x = 2
+		}
+		
+}
+
+
+</script>
+
+</head>
+<body>
+
+<div class="topbar">
+	<a href="about.html">About</a>
+	<a class="active" href="portfolio.html">Portfolio</a>
+	<a href="contact.html">Contact</a>
+	<a href="frontpage.html" style="float:right;"><img src="oana.png" width="50px" height="auto"/></a>
+</div>
+
+<br><br><br><br><br>
+
+<div align="center" style="font-size:20px; color:#9D9D9D;">Showcasing some of my best work<br><div align="center" style="font-size:50px;font-weight:bold; color:white;" >Portfolio</div></div>
+
+<br>
+
+<div style="text-align:center;color:#4AA96C;">
+
+	<span style="margin:20px;"><img src="sageata stanga.png" width="25px" height="auto" onclick="schimbapre()"/></span>
+
+	<span style="margin:20px;"><img src="sageata dreapta.png" width="25px" height="auto" onclick="schimbaurm()"/></span>
+	
+</div>
+
+<br>
+
+<hr>
+
+
+<img id="poza" src="oracle.jpg" width="400px" height="280px" align="left" style="margin:50px;"/>
+
+<br><br>
+
+<p id="titlu" style="font-size:27px; font-weight:bold;">Oracle Database with SQL</p>
+
+<div id="text" style="margin-right:60px; line-height:1.5; font-size:18px; color:#9D9D9D;">During the second semester of my second year of collage I did a project
+using Oracle Application and SQL language. The task was to build the database of an online auction company. During the development of the project
+I have used 10 tables between which I have established connections based on primary and foreign keys and in wchich I have inserted elements. I have also 
+set some constraints regarding the null values, the uniqueness of some elements and the range in which some recordings must fit.</div>
+
+
+
+</body>
+</html>
